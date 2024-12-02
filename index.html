@@ -161,7 +161,7 @@
 
         // Play hacker voice on page load
         window.onload = () => {
-            document.getElementById('hackerVoice').play();
+            hackerVoice.play();
         };
 
         // Handle login form submission
@@ -184,7 +184,7 @@
                 }, 1000);
             } else {
                 errorVoice.play();
-                alert("Invalid username or password! Try again.");
+                //alert("Invalid username or password! Try again.");
             }
         });
     </script>
