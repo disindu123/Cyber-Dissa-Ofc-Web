@@ -160,9 +160,10 @@
         });
 
         // Play hacker voice on page load
-        window.onload = () => {
-            hackerVoice.play();
-        };
+        document.getElementById("hackerVoice").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("voice").play();
+});
 
         // Handle login form submission
         document.getElementById('loginForm').addEventListener('submit', function (event) {
