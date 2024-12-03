@@ -160,9 +160,9 @@
         });
 
         // Play hacker voice on page load
-        document.getElementById("hackerVoice").addEventListener("click", function(event) {
-            event.preventDefault();
-            document.getElementById("voice").play();
+        //document.getElementById("hackerVoice").addEventListener("click", function(event) {
+            //event.preventDefault();
+            //document.getElementById("voice").play();
 });
 
         // Handle login form submission
@@ -180,7 +180,7 @@
             if (username === 'Dissa' && password === 'Dissa') {
                 successVoice.play();
                 setTimeout(() => {
-
+                //alert("Login Successful! Redirecting...");
         }
                     window.location.href = "https://disindu123.github.io/Disindu-web/"; // Replace with your destination URL
                 }, 1000);
