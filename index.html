@@ -180,7 +180,68 @@
             if (username === 'Dissa' && password === 'Dissa') {
                 successVoice.play();
                 setTimeout(() => {
-                    //alert("Login Successful! Redirecting...");
+/* Creating an enhanced hacker-themed alert using the :before pseudo-element */
+body::before {
+    content: "Login Successful! Redirecting...";
+    display: block;
+    background-color: black;
+    color: #00FF00; /* Hacker green */
+    font-family: 'Courier New', Courier, monospace; /* Terminal font */
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #00FF00; /* Green border */
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.9);
+    animation: showAlert 3s forwards, blinkCursor 1s step-end infinite, shakeAlert 0.5s ease-in-out 1s forwards;
+}
+
+/* Animation for showing the alert and disappearing after 3 seconds */
+@keyframes showAlert {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.1);
+    }
+    30% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+        display: none; /* Alert fades out */
+    }
+}
+
+/* Adding a blinking cursor effect for a more hacker-like theme */
+@keyframes blinkCursor {
+    0% { content: "Login Successful! Redirecting..."; }
+    50% { content: "Login Successful! Redirecting...|"; }
+    100% { content: "Login Successful! Redirecting..."; }
+}
+
+/* Adding a shake effect to grab attention */
+@keyframes shakeAlert {
+    0% { transform: translateX(-50%) translateX(0); }
+    25% { transform: translateX(-50%) translateX(-10px); }
+    50% { transform: translateX(-50%) translateX(10px); }
+    75% { transform: translateX(-50%) translateX(-10px); }
+    100% { transform: translateX(-50%) translateX(0); }
+        }
                     window.location.href = "https://disindu123.github.io/Disindu-web/"; // Replace with your destination URL
                 }, 1000);
             } else {
