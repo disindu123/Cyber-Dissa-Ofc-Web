@@ -159,24 +159,36 @@
             canvas.height = window.innerHeight;
         });
 
-        // Play hacker voice on page load
-        window.onload = () => {
-            document.getElementById('hackerVoice').play();
-        };
+    const hackerVoice = document.getElementById('hackerVoice');
+    const clickSound = document.getElementById('clickSound');
+    const successVoice = document.getElementById('successVoice');
+    const errorVoice = document.getElementById('errorVoice');
 
+
+    // Try to play the audio immediately
+    audio.play().then(() => {
+      console.log('Audio autoplayed successfully.');
+    }).catch(() => {
+      console.log('Autoplay failed, enabling user interaction to start playback.');
+      
+      // Add a click listener to start audio after user interaction
+      document.body.addEventListener('click', () => {
+        audio.play().then(() => {
+          console.log('Audio playback started.');
+        }).catch(error => {
+          console.error('Playback failed:', error);
+        });
+      }, { once: true }); // Ensure the event fires only once
+  
         // Handle login form submission
         document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault();
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            const clickSound = document.getElementById('clickSound');
-            const successVoice = document.getElementById('successVoice');
-            const errorVoice = document.getElementById('errorVoice');
-
             clickSound.play();
 
-            if (username === 'Dissa' && password === 'Dissa') {
+            if (username === 'Dassa' && password === 'Dassa') {
                 successVoice.play();
                 setTimeout(() => {
                     //alert("Login Successful! Redirecting...");
