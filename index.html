@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DASSA OFC LOGIN</title>
+    <title>DARK ADAM LOGIN</title>
     <style>
         body {
             margin: 0;
@@ -177,8 +177,8 @@
         }).catch(error => {
           console.error('Playback failed:', error);
         });
-      }, { once: true }); // Ensure the event fires only once
-});
+      }, { once: true }); // Ensure the event fires only once 
+      }
     
         // Handle login form submission
         document.getElementById('loginForm').addEventListener('submit', function (event) {
@@ -188,7 +188,7 @@
 
             clickSound.play();
 
-            if (username === 'Dassa' && password === 'Dassa') {
+            if (username === 'Adam' && password === 'Adam') {
                 successVoice.play();
                 setTimeout(() => {
                     //alert("Login Successful! Redirecting...");
