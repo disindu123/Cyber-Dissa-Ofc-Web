@@ -127,7 +127,7 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ×DISINDU";
+        const chars = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789!@#$%^&*()_+{}=|:<>?+-*[]\;/-";
         const fontSize = 16;
         const columns = canvas.width / fontSize;
 
@@ -178,8 +178,8 @@
           console.error('Playback failed:', error);
         });
       }, { once: true }); // Ensure the event fires only once 
-      }
-    
+});
+        
         // Handle login form submission
         document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault();
